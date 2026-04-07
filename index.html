@@ -28,7 +28,19 @@
         </nav>
       </div>
     </header>
-    <section class="hero" style="background-image:url('hero.jpg')">
+    <!-- Custom hero container using the designed hero image. -->
+    <div class="hero-container">
+      <img src="hero.jpg" class="hero-image" alt="JR and Rosie Wedding Hero">
+      <!-- Invisible clickable areas mapped over the hero design -->
+      <a href="rsvp.html" class="click rsvp" aria-label="RSVP"></a>
+      <a href="timeline.html" class="click events" aria-label="Timeline"></a>
+      <a href="travel.html" class="click travel" aria-label="Travel"></a>
+      <a href="hotels.html" class="click hotels" aria-label="Hotels"></a>
+      <a href="gallery.html" class="click gallery" aria-label="Gallery"></a>
+    </div>
+
+    <!-- Original hero section left intact for fallback but hidden via CSS -->
+    <section class="hero" style="background-image:url('assets/hero.jpg')">
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <h2>We are getting married</h2>

@@ -118,6 +118,70 @@ h6 {
 .button:hover {
   background-color: #a58660;
 }
+
+/* 
+  New hero container styles for the custom hero image layout.
+  These styles position the image and clickable areas and hide the original hero and info grid.
+*/
+
+.hero-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-image {
+  width: 100%;
+  display: block;
+}
+
+/* Invisible clickable areas overlaying the hero image */
+.click {
+  position: absolute;
+  display: block;
+}
+
+/* Positioning for each clickable region, adjust percentages to fine tune alignment */
+.rsvp {
+  top: 58%;
+  left: 8%;
+  width: 26%;
+  height: 18%;
+}
+
+.events {
+  top: 58%;
+  left: 36%;
+  width: 26%;
+  height: 18%;
+}
+
+.travel {
+  top: 58%;
+  left: 64%;
+  width: 26%;
+  height: 18%;
+}
+
+.hotels {
+  top: 78%;
+  left: 8%;
+  width: 26%;
+  height: 18%;
+}
+
+.gallery {
+  top: 78%;
+  left: 36%;
+  width: 26%;
+  height: 18%;
+}
+
+/* Hide the original hero and info-grid sections now replaced by the custom hero image layout */
+.hero,
+.info-grid {
+  display: none;
+}
 /* Info grid on home page */
 .info-grid {
   margin: 4rem auto;
