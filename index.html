@@ -3,19 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JR & Rosie Wedding</title>
+    <title>James & Rosie Wedding</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="navbar">
-      <div class="container">
-        <h1 class="logo">JR & Rosie</h1>
+      <div class="container nav-inner">
+        <h1 class="logo">James & Rosie</h1>
         <nav>
           <ul class="nav-list">
             <li><a href="index.html" class="active">Home</a></li>
@@ -23,58 +23,48 @@
             <li><a href="timeline.html">Timeline</a></li>
             <li><a href="travel.html">Travel</a></li>
             <li><a href="hotels.html">Hotels</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <!-- Custom hero container using the designed hero image. -->
-    <div class="hero-container">
-      <img src="hero.jpg" class="hero-image" alt="JR and Rosie Wedding Hero">
-      <!-- Invisible clickable areas mapped over the hero design -->
 
-    </div>
+    <main class="home-main">
+      <section class="hero-wrap container">
+        <img src="hero.jpg" alt="James and Rosie wedding at Villa Montalbano" class="hero-image" />
+      </section>
 
-    <!-- Original hero section left intact for fallback but hidden via CSS -->
-    <section class="hero" style="background-image:url('assets/hero.jpg')">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h2>Join us for an intimate celebration</h2>
-        <h3>October 11, 2026</h3>
-        <p class="venue">Villa Esengrini Montalbano, Italy</p>
-        <p>We'll gather for a beautiful weekend with our closest family and friends in Varese, Italy.</p>
-        <a href="rsvp.html" class="button">Save the date</a>
-      </div>
-    </section>
-    <section class="info-grid container">
-      <div class="info-card">
-        <h4>RSVP</h4>
-        <p>We can’t wait to celebrate together. Let us know if you can make it.</p>
-        <a href="rsvp.html" class="card-link">Respond here</a>
-      </div>
-      <div class="info-card">
-        <h4>Timeline</h4>
-        <p>Preview the weekend timeline.</p>
-        <a href="timeline.html" class="card-link">View timeline</a>
-      </div>
-      <div class="info-card">
-        <h4>Travel</h4>
-        <p>Get travel guidance for reaching Varese.</p>
-        <a href="travel.html" class="card-link">Plan your trip</a>
-      </div>
-      <div class="info-card">
-        <h4>Hotels</h4>
-        <p>View our hotel recommendations.</p>
-        <a href="hotels.html" class="card-link">Explore hotels</a>
-      </div>
-      <div class="info-card">
-        <h4>Gallery</h4>
-        <p>Take a peek at some of our favourite moments.</p>
-        <a href="gallery.html" class="card-link">View photos</a>
-      </div>
-    </section>
+      <section class="home-intro container">
+        <p class="eyebrow">October 11, 2026 • Villa Esengrini Montalbano • Varese, Italy</p>
+        <h2>An intimate wedding weekend in northern Italy</h2>
+        <p>
+          We are so excited to celebrate with our family and friends in Varese. Our weekend will be relaxed,
+          beautiful, and centered around time together, good food, and a memorable wedding day at Villa
+          Esengrini Montalbano.
+        </p>
+      </section>
+
+      <section class="home-links container">
+        <a href="rsvp.html" class="quick-link">
+          <span class="quick-link-title">RSVP</span>
+          <span class="quick-link-text">Share your plans and weekend details.</span>
+        </a>
+        <a href="timeline.html" class="quick-link">
+          <span class="quick-link-title">Timeline</span>
+          <span class="quick-link-text">See the updated schedule for the weekend.</span>
+        </a>
+        <a href="travel.html" class="quick-link">
+          <span class="quick-link-title">Travel</span>
+          <span class="quick-link-text">Airport, transportation, and planning notes.</span>
+        </a>
+        <a href="hotels.html" class="quick-link">
+          <span class="quick-link-title">Hotels</span>
+          <span class="quick-link-text">Where we are staying and nearby options.</span>
+        </a>
+      </section>
+    </main>
+
     <footer class="footer">
-      <p>© 2026 JR & Rosie. All rights reserved.</p>
+      <p>© 2026 James & Rosie. All rights reserved.</p>
     </footer>
   </body>
 </html>
