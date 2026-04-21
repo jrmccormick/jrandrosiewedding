@@ -3,19 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RSVP | JR & Rosie Wedding</title>
+    <title>RSVP | James & Rosie Wedding</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="navbar">
-      <div class="container">
-        <h1 class="logo">JR & Rosie</h1>
+      <div class="container nav-inner">
+        <h1 class="logo">James & Rosie</h1>
         <nav>
           <ul class="nav-list">
             <li><a href="index.html">Home</a></li>
@@ -23,39 +23,44 @@
             <li><a href="timeline.html">Timeline</a></li>
             <li><a href="travel.html">Travel</a></li>
             <li><a href="hotels.html">Hotels</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <main class="container">
+
+    <main class="page-main container narrow">
       <section class="page-header">
-        <h2>RSVP</h2>
-        <p>We would love to celebrate with you in Italy. Please fill out the form below to let us know your plans. Final details and a formal RSVP link will be provided closer to the date.</p>
+        <p class="eyebrow">RSVP</p>
+        <h2>Reply details coming soon</h2>
+        <p>
+          We are still finalizing the RSVP setup. In the meantime, the form below reflects the information we plan to collect for the wedding weekend.
+        </p>
       </section>
-      <section>
+
+      <section class="content-card">
         <form class="rsvp-form">
-          <input type="text" name="name" placeholder="Your full name" required />
-          <input type="email" name="email" placeholder="Your email address" required />
-          <select name="attending" required>
-            <option value="">Will you attend the wedding?</option>
-            <option value="yes">Yes, I will attend</option>
-            <option value="no">No, I cannot attend</option>
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <select name="wedding" required>
+            <option value="">Attending wedding</option>
+            <option>Yes</option>
+            <option>No</option>
           </select>
-          <select name="wineTour" required>
-            <option value="">Will you join the Saturday wine tour?</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
+          <select name="wine-tour">
+            <option value="">Attending Saturday wine tour</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Maybe</option>
           </select>
-          <input type="text" name="hotel" placeholder="Hotel choice / where you are staying" />
-          <textarea name="notes" rows="4" placeholder="Notes or dietary restrictions"></textarea>
-          <button type="submit">Submit RSVP</button>
+          <input type="text" name="hotel" placeholder="Hotel choice or where you are staying" />
+          <textarea name="notes" rows="5" placeholder="Notes or dietary restrictions"></textarea>
+          <button type="button">RSVP details coming soon</button>
         </form>
-        <p style="margin-top:1rem; font-size:0.9rem; color:#777;">This form is a placeholder. A final RSVP form and instructions will be shared soon.</p>
       </section>
     </main>
+
     <footer class="footer">
-      <p>© 2026 JR & Rosie. All rights reserved.</p>
+      <p>© 2026 James & Rosie. All rights reserved.</p>
     </footer>
   </body>
 </html>
