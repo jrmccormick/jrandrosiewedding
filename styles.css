@@ -1,310 +1,321 @@
+/* Global styles for JR & Rosie wedding site */
 html {
   scroll-behavior: smooth;
 }
-
 body {
   margin: 0;
   font-family: 'Lora', serif;
-  background: #f8f5f0;
-  color: #3e3835;
+  background-color: #f8f6f3;
+  color: #333;
   line-height: 1.6;
 }
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: 0;
   font-family: 'Playfair Display', serif;
-  color: #3b3532;
+  margin: 0;
+  color: #333;
 }
-
-img {
-  max-width: 100%;
-}
-
 .container {
-  width: min(92%, 1180px);
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
 }
-
-.narrow {
-  max-width: 860px;
-}
-
-.center {
-  text-align: center;
-}
-
+/* Navigation bar */
 .navbar {
-  position: sticky;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid #e0dcd3;
+  position: fixed;
+  width: 100%;
   top: 0;
-  z-index: 20;
-  background: rgba(248, 245, 240, 0.92);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid #e5ddd2;
+  z-index: 1000;
 }
-
-.nav-inner {
+.navbar .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  align-items: center;
   padding: 1rem 0;
 }
-
 .logo {
-  font-size: 1.6rem;
-  color: #7d624f;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #7f5f3c;
+  letter-spacing: 1px;
 }
-
 .nav-list {
-  display: flex;
-  gap: 0.65rem;
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
+  display: flex;
+  gap: 1rem;
 }
-
-.nav-list a {
+.nav-list li a {
   text-decoration: none;
-  color: #5f4d41;
+  font-weight: 500;
+  color: #5a4b3b;
   padding: 0.5rem 0.75rem;
-  border-radius: 999px;
-  font-size: 0.98rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.nav-list li a:hover,
+.nav-list li a.active {
+  background-color: #e7dfd5;
+  color: #7f5f3c;
+  border-radius: 4px;
+}
+/* Hero section */
+.hero {
+  position: relative;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero h2 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.25rem;
+}
+.hero h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.hero .venue {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #c2a27d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #a58660;
 }
 
-.nav-list a:hover,
-.nav-list a.active {
-  background: #eadfd3;
-  color: #8f6f62;
-}
+/* 
+  New hero container styles for the custom hero image layout.
+  These styles position the image and clickable areas and hide the original hero and info grid.
+*/
 
-.home-main,
-.page-main {
-  padding: 2rem 0 4rem;
-}
-
-.hero-wrap {
-  padding-top: 1rem;
+.hero-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero-image {
   width: 100%;
   display: block;
-  border-radius: 28px;
-  box-shadow: 0 18px 45px rgba(83, 67, 57, 0.12);
 }
 
-.home-intro {
+/* Invisible clickable areas overlaying the hero image */
+.click {
+  position: absolute;
+  display: block;
+}
+
+/* Positioning for each clickable region, adjust percentages to fine tune alignment */
+.rsvp {
+  top: 58%;
+  left: 8%;
+  width: 26%;
+  height: 18%;
+}
+
+.events {
+  top: 58%;
+  left: 36%;
+  width: 26%;
+  height: 18%;
+}
+
+.travel {
+  top: 58%;
+  left: 64%;
+  width: 26%;
+  height: 18%;
+}
+
+.hotels {
+  top: 78%;
+  left: 8%;
+  width: 26%;
+  height: 18%;
+}
+
+.gallery {
+  top: 78%;
+  left: 36%;
+  width: 26%;
+  height: 18%;
+}
+
+/* Hide the original hero section (not used after redesign) */
+.hero {
+  display: none;
+}
+
+/* Introduction section below the hero image */
+.intro {
   text-align: center;
-  max-width: 820px;
-  padding: 2.25rem 0 1rem;
+  margin: 3rem auto;
 }
-
-.eyebrow {
-  margin: 0 0 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.82rem;
-  color: #b68978;
-}
-
-.home-intro h2,
-.page-header h2 {
-  font-size: clamp(2rem, 4vw, 3.1rem);
-  margin-bottom: 0.85rem;
-}
-
-.home-intro p,
-.page-header p,
-.content-card p,
-.timeline-copy p,
-.hotel-card p,
-.quick-link-text {
-  font-size: 1.02rem;
-  color: #5a504a;
-}
-
-.home-links {
+/* Info grid on home page */
+.info-grid {
+  margin: 4rem auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  padding-top: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
 }
-
-.quick-link {
+.info-card {
+  padding: 1.5rem;
+  border: 1px solid #e0dcd3;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.info-card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #7f5f3c;
+}
+.info-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+.card-link {
+  color: #7f5f3c;
   text-decoration: none;
-  background: #fff;
-  border: 1px solid #e7ddd1;
-  border-radius: 22px;
-  padding: 1.25rem;
-  box-shadow: 0 10px 30px rgba(83, 67, 57, 0.05);
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
 }
-
-.quick-link-title {
-  display: block;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
-  color: #7d624f;
-  margin-bottom: 0.4rem;
+.card-link:hover {
+  border-color: #7f5f3c;
 }
-
-.quick-link-text {
-  display: block;
+/* Pages general layout */
+main {
+  padding-top: 80px; /* space for fixed nav */
+  padding-bottom: 2rem;
 }
-
-.quick-link:hover {
-  transform: translateY(-2px);
-}
-
 .page-header {
   text-align: center;
-  padding: 1rem 0 2rem;
+  margin-bottom: 2rem;
 }
-
-.content-card,
-.hotel-card {
-  background: #fff;
-  border: 1px solid #e7ddd1;
-  border-radius: 26px;
-  box-shadow: 0 12px 34px rgba(83, 67, 57, 0.06);
+.section {
+  padding: 2rem 0;
 }
-
-.content-card {
-  padding: 1.5rem 1.6rem;
-}
-
-.content-card.stacked {
-  display: grid;
-  gap: 1.35rem;
-}
-
-.content-card h3,
-.hotel-card h3,
-.timeline-copy h3 {
-  font-size: 1.45rem;
-  color: #7d624f;
-  margin-bottom: 0.4rem;
-}
-
-.timeline-list {
-  display: grid;
-  gap: 1.15rem;
-}
-
-.timeline-item {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 1.2rem;
-  background: #fff;
-  border: 1px solid #e7ddd1;
-  border-radius: 26px;
-  padding: 1.4rem 1.5rem;
-  box-shadow: 0 12px 34px rgba(83, 67, 57, 0.06);
-}
-
-.timeline-day {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
-  color: #b68978;
-}
-
-.hotel-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.2rem;
-}
-
-.hotel-card {
-  padding: 1.5rem;
-}
-
-.hotel-card-primary {
-  border-color: #d8c2b6;
-  background: linear-gradient(180deg, #fffaf7 0%, #fff 100%);
-}
-
-.hotel-label {
-  display: inline-block;
-  margin-bottom: 0.75rem;
-  padding: 0.3rem 0.65rem;
-  border-radius: 999px;
-  background: #f1e2da;
-  color: #9e735f;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.hotel-card a {
-  color: #8f6f62;
-}
-
+/* RSVP form */
 .rsvp-form {
-  display: grid;
-  gap: 0.9rem;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+ .rsvp-form input,
+ .rsvp-form textarea,
+ .rsvp-form select {
+  padding: 0.75rem;
+  border: 1px solid #e0dcd3;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
-.rsvp-form input,
-.rsvp-form textarea,
-.rsvp-form select,
-.rsvp-form button {
-  font: inherit;
-}
-
-.rsvp-form input,
-.rsvp-form textarea,
+/* Custom select arrow */
 .rsvp-form select {
-  padding: 0.85rem 0.95rem;
-  border-radius: 14px;
-  border: 1px solid #e0d6ca;
-  background: #fff;
+  appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath fill='%237f5f3c' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 10px 6px;
+  padding-right: 2rem;
 }
-
 .rsvp-form button {
-  padding: 0.9rem 1rem;
-  border: none;
-  border-radius: 999px;
-  background: #c79e8e;
+  padding: 0.75rem;
+  background-color: #c2a27d;
   color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
-
+.rsvp-form button:hover {
+  background-color: #a58660;
+}
+/* Timeline list */
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.timeline-item {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.timeline-item .time {
+  font-weight: 600;
+  color: #7f5f3c;
+  width: 80px;
+  flex-shrink: 0;
+}
+.timeline-item .details {
+  flex-grow: 1;
+}
+/* Gallery */
+.gallery {
+  column-count: 3;
+  column-gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  break-inside: avoid;
+}
+/* Footer */
 .footer {
-  padding: 2rem 1rem 3rem;
+  background-color: #f0ece6;
+  padding: 1rem;
   text-align: center;
-  color: #8b8078;
-  font-size: 0.92rem;
-}
-
-@media (max-width: 900px) {
-  .home-links,
-  .hotel-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .timeline-item {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 680px) {
-  .nav-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .home-links,
-  .hotel-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-main,
-  .page-main {
-    padding-top: 1rem;
-  }
+  font-size: 0.875rem;
+  color: #7a6d5a;
 }
