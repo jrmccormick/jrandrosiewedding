@@ -319,3 +319,64 @@ main {
   font-size: 0.875rem;
   color: #7a6d5a;
 }
+
+/* Attire page styles */
+.attire-section {
+  text-align: center;
+  margin: 4rem auto;
+}
+
+.color-palette {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.color-swatch {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.color-swatch:hover {
+  transform: scale(1.2);
+}
+
+.color-swatch.champagne {
+  background-color: #f7e9d5;
+}
+.color-swatch.blush {
+  background-color: #f3d3d8;
+}
+.color-swatch.pink {
+  background-color: #f7b7c3;
+}
+.color-swatch.burgundy {
+  background-color: #803336;
+}
+.color-swatch.taupe {
+  background-color: #d1c1ae;
+}
+.color-swatch.black {
+  background-color: #000000;
+}
+
+.attire-guide-img {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.attire-details {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.attire-details h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
