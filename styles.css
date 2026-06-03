@@ -380,3 +380,14 @@ main {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .hero-content {
+    padding: 2rem 1rem;
+  }
+}
