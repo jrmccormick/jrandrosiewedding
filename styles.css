@@ -413,3 +413,18 @@ main {
     font-size: 0.9rem;
   }
 }
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero {
+    padding-top: 2rem;
+    min-height: calc(100vh - 140px);
+  }
+
+  .hero-content {
+    padding-top: 2rem;
+  }
+}
